@@ -107,54 +107,60 @@ body {
       }
     }
     .section-2 {
-      display: flex;
       background-color: var(--section-background);
-      padding: var(--section-padding) 100px;
-      justify-content: space-between;
-      gap: 20px;
-      .card {
-        text-align: center;
-        i {
-          color: var(--main-color);
-        }
-      }
-    }
-    .section-3 {
-      padding: var(--section-padding) 0;
-      .content {
-        padding: var(--section-padding) 200px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 40px;
+      padding: var(--section-padding) 20px;
+      .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
         .card {
-          display: flex;
-          height: 50%;
-          gap: 20px;
-          h2 {
-            margin: 0;
-          }
+          text-align: center;
           i {
             color: var(--main-color);
           }
         }
-        .col{
-          flex: 1;
-        }
-        .col-3 {
-          display: flex;
-          align-items: ;
-          position: relative;
-          img {
-            height: 300px;
+      }
+    }
+    .section-3 {
+      .container {
+        padding: var(--section-padding) 20px;
+        .content {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 40px;
+          .card {
+            display: flex;
+            height: 50%;
+            gap: 20px;
           }
-          span {
-            position: absolute;
-            height: 400px;
-            width: 100px;
-            background-color: var(--secondary-color);
-            right: 0;
-            top: 0;
-            z-index: -1;
+          .col {
+            flex: 1;
+            h2 {
+              margin: 0;
+            }
+            i {
+              color: var(--main-color);
+            }
+          }
+          .col-3 {
+            display: flex;
+            align-items: center;
+            .image {
+              position: relative;
+              img {
+                height: 300px;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                height: calc(100% + 100px);
+                width: 100px;
+                background-color: var(--secondary-color);
+                right: -20px;
+                top: -50px;
+                z-index: -1;
+              }
+            }
           }
         }
       }
@@ -178,6 +184,18 @@ body {
       color: var(--secondary-color);
       left: 50%;
       transform: translate(-50%, 0);
+    }
+  }
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+  }
+}
+@media (max-width: 768px) {
+  .section-3 {
+    .col-3 {
+      display: none;
     }
   }
 }
