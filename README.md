@@ -1,4 +1,4 @@
 ### Demo
 
-https://youssef-joe-git.github.io/Dashboard\_Elzero\_Template\_one/
+https://youssef-joe-git.github.io/Elzero\_Template\_one/
 
